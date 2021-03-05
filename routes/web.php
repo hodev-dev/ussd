@@ -6,5 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function (Request $request) {
     $call = $request['call'];
-    return new Response((string) $call, 200, ['Content-Type' => 'text/plain']);
+    return new Response(
+        "جواب از وبسرویس",
+        200,
+        ['Content-Type' => 'text/plain']
+    );
 });
